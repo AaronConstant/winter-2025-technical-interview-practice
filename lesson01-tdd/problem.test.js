@@ -36,4 +36,10 @@ describe('isPalindrome', () => {
     test('palindrome with numbers should work', () => {
         expect(isPalindrome('12321')).toBe(true);
     });
+
+    test('If Palindrome is not a string, return false', () => {
+        expect(isPalindrome(123)).toBe(false);
+    });
+
+    
 });

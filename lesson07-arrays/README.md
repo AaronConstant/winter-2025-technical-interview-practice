@@ -23,7 +23,7 @@ console.log(removedFruit); // Output: 'orange'
 console.log(fruits); // Output: ['apple', 'banana']
 ```
 
-- `shift`: Removes the first element from an array and returns it.
+- `shift`: Removes the first element from an array and returns it. O(n-1)
 
 ```javascript
 let fruits = ["apple", "banana", "orange"];
@@ -32,7 +32,7 @@ console.log(removedFruit); // Output: 'apple'
 console.log(fruits); // Output: ['banana', 'orange']
 ```
 
-- `unshift`: Adds one or more elements to the beginning of an array.
+- `unshift`: Adds one or more elements to the beginning of an array. O(n)
 
 ```javascript
 let fruits = ["banana", "orange"];
@@ -92,6 +92,8 @@ console.log(index); // Output: 1
 ```
 
 - `sort`: Sorts the elements of an array in place and returns the sorted array.
+
+O(n log n) - dividing your input in half with every iteration( log n) dividing the space complexity in half. The time complexity is based on the total number of ithe sort. Split it in half and merge it. 
 
 ```javascript
 let fruits = ["banana", "apple", "orange"];

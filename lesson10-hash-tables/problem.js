@@ -8,7 +8,31 @@
  * @return {number[]} - An array containing the indices of the two numbers that add up to the target.
  */
 const twoSum = (nums, target) => {
-  // Your code here
+  nums.sort((a, b) => a - b);
+
+  if(nums.length === 1) return nums
+
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+      const sum = nums[left] + nums[right];
+
+      if (sum === target) {
+          return [nums[left], nums[right]];
+      } else if (sum < target) {
+          left++;
+      } else {
+          right--;
+      }
+  }
+  return [];
 };
+
+// const twoSum = (nums, target) => {
+
+// }
+
+
 
 module.exports = twoSum;

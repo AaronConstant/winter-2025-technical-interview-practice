@@ -11,7 +11,14 @@
  * @returns {boolean} - True if the string is a palindrome, false otherwise.
  */
 function isPalindrome(str) {
-  // your code here
+  let container = [];
+  let splitLowerCaseStr = str.split(''); 
+  if (str.length <= 1) return true;
+
+  for (let i = splitLowerCaseStr.length - 1; i >= 0; i--) {
+    container.push(splitLowerCaseStr[i]);
+  }
+  return container.join('') === str;
 }
 
 module.exports = isPalindrome;
