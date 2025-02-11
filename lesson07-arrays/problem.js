@@ -10,9 +10,6 @@ module.exports = function removeDuplicates(arr) {
       }
       return noDupes
     },[])
-    for(let i = 0; i<arr.length;i++) {
-      
-    }
 };
 
 // removeDuplicates([1, 1, 1, 1, 1, 1]); // => [1]

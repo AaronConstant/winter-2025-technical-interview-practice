@@ -4,7 +4,15 @@
  */
 
 function isLeapYear(year) {
-  // TODO: Implement the function
+
+  // label your divisible targets then simplify it for better readablility for interview purposes!
+  
+  // such as let divisibleBy4 = year % 4 === 0
+  // let divisibleBy100 = year % 100 !== 0
+  // let divisibleBy400 = year % 400 === 0 
+  return (year % 4 === 0 && 
+          year % 100 !== 0) || 
+          (year % 400 === 0);
 }
 
 module.exports = isLeapYear;

@@ -29,9 +29,15 @@ const twoSum = (nums, target) => {
   return [];
 };
 
-// const twoSum = (nums, target) => {
+const twooSum = (nums, target) => {
+  const map = new Map(); //hashmap 
 
-// }
+  for(let i = 0;i<nums.length;i++) {
+    if(map.has(nums[i])) return [map.get(nums[i], i)]
+  }
+}
+
+
 
 
 
