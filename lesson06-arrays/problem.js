@@ -6,12 +6,18 @@
  * @returns {number} - The index of the largest element if it meets the condition, otherwise -1.
  */
 function checkLargestElement(nums) {
+    if (nums.length === 0) return -1
 
-    return largestNum = Math.max(...nums)
-}
+    const maxNum = Math.max(...nums);
+    const maxIndex = nums.indexOf(maxNum);
 
-function checkLargestElement(nums) {
-    if( nums.length === 0) return []
+    for (let i = 0; i < nums.length; i++) {
+        if (i !== maxIndex && maxNum < 2 * nums[i]) {
+            return -1;
+        }
+    }
+
+    return maxIndex;
 }
 
 module.exports = checkLargestElement;
